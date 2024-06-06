@@ -6,7 +6,7 @@
 /*   By: mben-jad <mben-jad@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 15:44:55 by mben-jad          #+#    #+#             */
-/*   Updated: 2024/06/05 16:37:44 by mben-jad         ###   ########.fr       */
+/*   Updated: 2024/06/06 16:16:20 by mben-jad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@
 # include <signal.h>
 # include <stdlib.h>
 # include <unistd.h>
-
+#include <stdio.h>
 typedef struct s_data
 {
 	int		pid;
-	size_t	length;
+	int	length;
 	int		bits;
-	size_t	index;
+	int		bits_char;
+	int	index;
 	char	*str;
 	int		is_allocated;
 	char	character;

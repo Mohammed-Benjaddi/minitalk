@@ -6,7 +6,7 @@
 /*   By: mben-jad <mben-jad@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/29 10:20:03 by mben-jad          #+#    #+#             */
-/*   Updated: 2024/06/05 16:20:07 by mben-jad         ###   ########.fr       */
+/*   Updated: 2024/06/06 16:29:48 by mben-jad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,16 @@ void	ft_error(void)
 
 void	vars_init(t_data *data)
 {
+	if(data->is_allocated)
+		free(data->str);
 	data->bits = 31;
+	data->bits_char = 8;
 	data->index = 0;
-	data->pid = getpid();
 	data->length = 0;
 	data->is_allocated = 0;
 	data->clt_pid = 0;
-	free(data->str);
-	data->str = NULL;
+	data->character = 0;
+	// data->str = NULL;
 }
 
 void	ft_putchar(char c)
