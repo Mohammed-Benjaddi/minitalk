@@ -32,12 +32,15 @@ void	ft_error(void)
 
 void	vars_init(t_data *data)
 {
+	if(data->is_allocated)
+		free(data->str);
 	data->bits = 31;
+	data->bits_char = 8;
 	data->index = 0;
-	data->pid = getpid();
 	data->length = 0;
 	data->is_allocated = 0;
 	data->clt_pid = 0;
+	data->character = 0;
 }
 
 void	ft_putchar(char c)

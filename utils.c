@@ -41,7 +41,6 @@ void	vars_init(t_data *data)
 	data->is_allocated = 0;
 	data->clt_pid = 0;
 	data->character = 0;
-	// data->str = NULL;
 }
 
 void	ft_putchar(char c)

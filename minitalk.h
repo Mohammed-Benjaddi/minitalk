@@ -13,11 +13,10 @@
 #ifndef MINITALK_H
 # define MINITALK_H
 
-# include <limits.h>
 # include <signal.h>
 # include <stdlib.h>
 # include <unistd.h>
-#include <stdio.h>
+
 typedef struct s_data
 {
 	int		pid;

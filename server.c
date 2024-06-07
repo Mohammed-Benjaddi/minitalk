@@ -31,16 +31,11 @@ void	catch_data(int signal)
 		g_data.str[g_data.index] = '\0';
 		ft_putstr_fd(g_data.str, 1);
 		vars_init(&g_data);
-		// ft_putstr_fd("\nafter printing     ", 1);
-		// ft_putnbr(g_data.length);
 	}
 }
 
 void	allocate_len(void)
 {
-	// ft_putstr_fd("\n-------> length: ", 1);
-	// ft_putnbr(g_data.length);
-	// ft_putchar('\n');
 	g_data.str = malloc(g_data.length + 1);
 	if (!g_data.str)
 	{

@@ -13,7 +13,6 @@
 #ifndef MINITALK_BONUS_H
 # define MINITALK_BONUS_H
 
-# include <limits.h>
 # include <signal.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -21,9 +20,10 @@
 typedef struct s_data
 {
 	int		pid;
-	size_t	length;
+	int	length;
 	int		bits;
-	size_t	index;
+	int		bits_char;
+	int	index;
 	char	*str;
 	int		is_allocated;
 	char	character;
